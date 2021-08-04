@@ -49,9 +49,9 @@ class loginPage extends StatelessWidget {
                     ),
                     ElevatedButton(
                       onPressed: () {
-                      //  Navigator.push(context, route);
-                        Navigator.pushNamed(context, MyRoutes.homeRoute)
-                        
+                        //  Navigator.push(context, route);
+                        Navigator.pushNamed(context, MyRoutes.homeRoute);
+
                         //Next Page ma jana k lye
                       },
                       child: Text("login"),
