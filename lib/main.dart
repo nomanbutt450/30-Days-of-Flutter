@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_catalog/pages/login_page.dart';
+import 'package:flutter_catalog/utils/routes.dart';
 import 'pages/home_page.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 void main() {
   runApp(MyApp());
@@ -20,14 +22,18 @@ class MyApp extends StatelessWidget {
 
       //Theme Data must provide the ThemeMode///
       themeMode: ThemeMode.light,
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(primarySwatch: Colors.deepPurple),
-      darkTheme: ThemeData(brightness: Brightness.dark),
+      darkTheme: ThemeData(
+        brightness: Brightness.dark,
+        fontFamily: GoogleFonts.lato().fontFamily,
+      ),
       //A multiple ways of App like multiple pages////
-      initialRoute: "/home",
+      initialRoute: "/Login",
       routes: {
         // "/":(context)=> HomePage(), by default choose any one above or this.
-        "/home": (context) => homePage(),
-        "/Login": (context) => loginPage(),
+        MyRoutes.homeRoute: (context) => homePage(),
+        MyRoutes.LoginRoute: (context) => loginPage(),
       },
     );
   }
@@ -39,4 +45,4 @@ class MyApp extends StatelessWidget {
   }
 }
 
-// video last seen: 1:17:55
+// video last seen: 2:06:22
